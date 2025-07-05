@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
 .landing {
-  
+  border: 1px solid #2b3857;
   height: 100vh;
   background: url('/src/img/landingPage.jpg');
   background-size: cover;
@@ -17,9 +11,24 @@
   position: relative;
   overflow: hidden;
   
-  color: white;
+  color: #2b3857;
   padding: 2rem;
 }
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+  opacity: 0.5;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
 
 .textOverlay {
   z-index: 2;
@@ -31,12 +40,12 @@
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color: #ffffff;
+  color: #2b3857;
 }
 
 .textOverlay p {
   font-size: 1.2rem;
-  color: #dcdcdc;
+  color: #091b50;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
