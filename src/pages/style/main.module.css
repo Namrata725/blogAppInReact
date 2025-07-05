@@ -1,0 +1,21 @@
+.aboutContainer {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.aboutContent {
+  flex: 3;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.aboutBg {
+  flex: 3;
+  height: 100%;
+  background: url('src/img/about.jpg') no-repeat right center;
+  background-size: cover;
+}
