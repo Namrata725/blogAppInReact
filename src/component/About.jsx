@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import aboutImg from "/src/img/about.jpg";
 import style from "./about.module.css";
 
@@ -25,13 +26,15 @@ function About() {
           rem quisquam? Fugit ut eaque voluptas excepturi expedita?
         </p>
         <Link to="/all" className={style.button}>
-          <button> View Blogs</button>
+          <button>View Blogs</button>
         </Link>
       </div>
       <div
         className={style.aboutBg}
         style={{ backgroundImage: `url(${aboutImg})` }}
-      />
+      ></div>
     </div>
   );
 }
+
+export default About;
