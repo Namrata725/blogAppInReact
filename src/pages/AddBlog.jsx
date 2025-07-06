@@ -10,6 +10,7 @@ function AddBlog() {
   const [content, setContent] = useState("");
   const [moutainVisited, setMoutainVisited] = useState("");
   const navigate = useNavigate();
+  const [customMountain, setCustomMountain] = useState("");
 
   const handleMainImageChange = (event) => {
     setMainImage(event.target.file[0]);
@@ -33,7 +34,8 @@ function AddBlog() {
       mainImage: mainImage ? URL.createObjectURL(mainImage) : "",
       galleryImages: galleryImages.map((image) => URL.createObjectURL(image)),
       content,
-      moutainVisited,
+      moutainVisited:
+        moutainVisited === "Other" ? customMountain : moutainVisited,
       author: user?.username || "guest",
     };
 
@@ -123,21 +125,30 @@ function AddBlog() {
 
           <select
             value={moutainVisited}
-            onChange={(event) => {
-              setMoutainVisited(event.target.value);
-            }}
+            onChange={(event) => setMoutainVisited(event.target.value)}
             required
           >
             <option value="">Select Mountain Visited</option>
             <option value="Everest">Everest</option>
-            <option value="Annapurna">Annapurna</option>
-            <option value="Langtang">Langtang</option>
+            <option value="Kanchenjunga">Kanchenjunga</option>
+            <option value="Lhotse">Lhotse</option>
+            <option value="Makalu">Makalu</option>
+            <option value="Cho Oyu">Cho Oyu</option>
             <option value="Dhaulagiri">Dhaulagiri</option>
             <option value="Manaslu">Manaslu</option>
-            <option value="Makalu">Makalu</option>
-            <option value="Kanchenjunga">Kanchenjunga</option>
-            <option value="Machapuchare">Machapuchare</option>
+            <option value="Annapurna">Annapurna</option>
+            <option value="Other">Other</option>
           </select>
+
+          {moutainVisited === "Other" && (
+            <input
+              type="text"
+              placeholder="Enter Mountain Name"
+              value={customMountain}
+              onChange={(event) => setCustomMountain(event.target.value)}
+              required
+            />
+          )}
 
           <button type="submit">Submit Blog</button>
         </form>

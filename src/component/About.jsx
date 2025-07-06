@@ -13,6 +13,7 @@ function About() {
           sit amet consectetur adipisicing elit. Placeat molestiae itaque veniam
           nam accusamus quidem officiis quae quia asperiores blanditiis?
         </p>
+        <button className={style.button}>View Our Blogs</button>
       </div>
       <div className={style.aboutBg}></div>
     </div>

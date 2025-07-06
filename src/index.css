@@ -19,3 +19,10 @@ h2{
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+button{
+  background-color: #15516b;
+  padding: 10px;
+  color: white;
+
+}
