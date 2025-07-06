@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Navbar from "./component/Navbar";
+import AddBlog from "./pages/AddBlog";
 
 function App() {
   return (
@@ -16,6 +17,16 @@ function App() {
               <>
                 <Navbar />
                 <Main />
+              </>
+            }
+          ></Route>
+
+          <Route
+            path="/add"
+            element={
+              <>
+                <Navbar />
+                <AddBlog />
               </>
             }
           ></Route>
