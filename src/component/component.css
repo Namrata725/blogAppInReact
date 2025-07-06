@@ -4,6 +4,7 @@
   padding: 0;
 }
 .navbar-container {
+  z-index: 200;
   font-family: 'Poppins', sans-serif;
   background-color: #15516b;
   color: white;
@@ -77,3 +78,65 @@
   cursor: pointer;
   font-weight: 600;
 }
+.mountain-layout {
+  background-color: #15516b;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+  align-items: center;
+}
+
+.mountain-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.center-row {
+  justify-content: center;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  padding: 15px;
+  width: 80%;
+  border-top-right-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-overlay h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.card-overlay p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
