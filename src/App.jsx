@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
@@ -11,7 +11,7 @@ import EditBlog from "./pages/EditBlog";
 
 function App() {
   return (
-    <Router basename="/blogAppInReact">
+    <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
@@ -69,6 +69,8 @@ function App() {
             </>
           }
         />
+        {/* Optional: Fallback 404 route */}
+        <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
   );
