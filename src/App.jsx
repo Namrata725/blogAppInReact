@@ -8,75 +8,69 @@ import AllBlogs from "./pages/AllBlogs";
 import BlogDetails from "./BlogDetails";
 import MyBlogs from "./pages/MyBlogs";
 import EditBlog from "./pages/EditBlog";
+
 function App() {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />}></Route>
-          <Route
-            path="/explore"
-            element={
-              <>
-                <Navbar />
-                <Main />
-              </>
-            }
-          ></Route>
-
-          <Route
-            path="/add"
-            element={
-              <>
-                <Navbar />
-                <AddBlog />
-              </>
-            }
-          ></Route>
-          <Route path="/login" element={<Login />}></Route>
-
-          <Route
-            path="/all"
-            element={
-              <>
-                <Navbar />
-                <AllBlogs />
-              </>
-            }
-          ></Route>
-
-          <Route
-            path="/blog/:id"
-            element={
-              <>
-                <Navbar />
-                <BlogDetails />
-              </>
-            }
-          ></Route>
-
-          <Route
-            path="/myblogs"
-            element={
-              <>
-                <Navbar />
-                <MyBlogs />
-              </>
-            }
-          />
-
-          <Route
-            path="/edit/:id"
-            element={
-              <>
-                <Navbar />
-                <EditBlog />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
-    </div>
+    <Router basename="/blogAppInReact">
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/explore"
+          element={
+            <>
+              <Navbar />
+              <Main />
+            </>
+          }
+        />
+        <Route
+          path="/add"
+          element={
+            <>
+              <Navbar />
+              <AddBlog />
+            </>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/all"
+          element={
+            <>
+              <Navbar />
+              <AllBlogs />
+            </>
+          }
+        />
+        <Route
+          path="/blog/:id"
+          element={
+            <>
+              <Navbar />
+              <BlogDetails />
+            </>
+          }
+        />
+        <Route
+          path="/myblogs"
+          element={
+            <>
+              <Navbar />
+              <MyBlogs />
+            </>
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            <>
+              <Navbar />
+              <EditBlog />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
