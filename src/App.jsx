@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Navbar from "./component/Navbar";
 import AddBlog from "./pages/AddBlog";
 import AllBlogs from "./pages/AllBlogs";
+import BlogDetails from "./BlogDetails";
 
 function App() {
   return (
@@ -39,6 +40,16 @@ function App() {
               <>
                 <Navbar />
                 <AllBlogs />
+              </>
+            }
+          ></Route>
+
+          <Route
+            path="/blog/:id"
+            element={
+              <>
+                <Navbar />
+                <BlogDetails />
               </>
             }
           ></Route>
