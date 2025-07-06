@@ -6,7 +6,8 @@ import Navbar from "./component/Navbar";
 import AddBlog from "./pages/AddBlog";
 import AllBlogs from "./pages/AllBlogs";
 import BlogDetails from "./BlogDetails";
-
+import MyBlogs from "./pages/MyBlogs";
+import EditBlog from "./pages/EditBlog";
 function App() {
   return (
     <div>
@@ -53,6 +54,26 @@ function App() {
               </>
             }
           ></Route>
+
+          <Route
+            path="/myblogs"
+            element={
+              <>
+                <Navbar />
+                <MyBlogs />
+              </>
+            }
+          />
+
+          <Route
+            path="/edit/:id"
+            element={
+              <>
+                <Navbar />
+                <EditBlog />
+              </>
+            }
+          />
         </Routes>
       </Router>
     </div>
