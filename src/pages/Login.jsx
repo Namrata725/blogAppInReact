@@ -12,19 +12,19 @@ function login() {
 
     if (username === "admin" && password === "admin") {
       localStorage.setItem("user", JSON.stringify({ username, isAdmin: true }));
-      navigate("/");
+      navigate("/all");
     } else if (username === "user" && password === "user") {
       localStorage.setItem(
         "user",
         JSON.stringify({ username, isAdmin: false })
       );
-      navigate("/");
+      navigate("/myblogs");
     } else if (username === "user1" && password === "user1") {
       localStorage.setItem(
         "user",
         JSON.stringify({ username, isAdmin: false })
       );
-      navigate("/");
+      navigate("/myblogs");
     } else if (username && password) {
       alert("Invalid Username or Password");
     } else {
