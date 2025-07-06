@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style/addBlog.css";
 function AddBlog() {
@@ -11,6 +11,14 @@ function AddBlog() {
   const [moutainVisited, setMoutainVisited] = useState("");
   const navigate = useNavigate();
   const [customMountain, setCustomMountain] = useState("");
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      alert("Please login to add a blog.");
+      navigate("/login");
+    }
+  }, [navigate]);
 
   const handleMainImageChange = (event) => {
     setMainImage(event.target.files[0]); // ✅ FIXED

@@ -31,8 +31,12 @@ function Navbar() {
         <Link to="/explore" className="nav-link">
           About
         </Link>
+
+        <Link to="/all" className="nav-link">
+          All Blogs
+        </Link>
         <Link to="/add" className="nav-link">
-          Add
+          Add Blog
         </Link>
         <Link to="/myblogs" className="nav-link">
           My Blogs

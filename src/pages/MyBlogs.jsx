@@ -8,15 +8,14 @@ function MyBlogs() {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    const allBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
-
     if (!user) {
       alert("Please login first.");
       navigate("/login");
       return;
     }
 
-    // Normalize usernames (just in case)
+    const allBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
+
     const username = user.username?.toLowerCase();
 
     const filteredBlogs = user.isAdmin
@@ -32,12 +31,12 @@ function MyBlogs() {
     );
     if (!confirmDelete) return;
 
-    const updatedBlogs = myBlogs.filter((b) => b.id !== id);
-    setMyBlogs(updatedBlogs);
+    const updatedMyBlogs = myBlogs.filter((b) => b.id !== id);
+    setMyBlogs(updatedMyBlogs);
 
     const allBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
-    const remaining = allBlogs.filter((b) => b.id !== id);
-    localStorage.setItem("blogs", JSON.stringify(remaining));
+    const updatedAllBlogs = allBlogs.filter((b) => b.id !== id);
+    localStorage.setItem("blogs", JSON.stringify(updatedAllBlogs));
   };
 
   return (
