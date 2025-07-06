@@ -4,6 +4,7 @@ import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Navbar from "./component/Navbar";
 import AddBlog from "./pages/AddBlog";
+import AllBlogs from "./pages/AllBlogs";
 
 function App() {
   return (
@@ -31,6 +32,16 @@ function App() {
             }
           ></Route>
           <Route path="/login" element={<Login />}></Route>
+
+          <Route
+            path="/all"
+            element={
+              <>
+                <Navbar />
+                <AllBlogs />
+              </>
+            }
+          ></Route>
         </Routes>
       </Router>
     </div>

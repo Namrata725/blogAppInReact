@@ -13,11 +13,11 @@ function AddBlog() {
   const [customMountain, setCustomMountain] = useState("");
 
   const handleMainImageChange = (event) => {
-    setMainImage(event.target.file[0]);
+    setMainImage(event.target.files[0]); // ✅ FIXED
   };
 
   const handleGalleryImageChange = (event) => {
-    const files = Array.from(event.target.file);
+    const files = Array.from(event.target.files); // ✅ FIXED
     setGalleryImages((prev) => [...prev, ...files]);
   };
 
