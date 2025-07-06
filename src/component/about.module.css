@@ -16,7 +16,7 @@
 .aboutBg {
   flex: 3;
   height: 100%;
-  background: url('/img/about.jpg') no-repeat right center;
+  background: url('/img/about-us.jpg') no-repeat right center;
   background-size: cover;
 }
 
