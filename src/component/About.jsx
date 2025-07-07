@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import aboutImg from "/src/img/about.jpg";
+import aboutImg from "../img/about-us.jpg";
 import style from "./about.module.css";
 
 function About() {
@@ -29,6 +29,7 @@ function About() {
           <button>View Blogs</button>
         </Link>
       </div>
+
       <div
         className={style.aboutBg}
         style={{ backgroundImage: `url(${aboutImg})` }}
