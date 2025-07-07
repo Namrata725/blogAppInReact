@@ -19,8 +19,17 @@
   background-size: cover;
 }
 
-
-.button{
+.button {
   margin-top: 20px;
   width: 150px;
+}
+
+@media screen and (max-width: 1246px) {
+  .aboutBg {
+    display: none;
+    height: 600px;
+  }
+  .aboutContainer{
+    height: auto;
+  }
 }
